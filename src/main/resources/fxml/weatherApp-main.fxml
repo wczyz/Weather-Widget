@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<!--<?import weatherApp.control.SpinningFontIcon?>-->
+<!--<?import weatherApp.control.RateValueControl?>-->
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import weatherApp.control.WeatherControl?>
+
+<?import weatherApp.control.TemperatureValueControl?>
+<?import weatherApp.control.SpinningFontIcon?>
+
+<?import weatherApp.control.WeatherControl?>
+<StackPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.112-ea"
+           fx:controller="weatherApp.controller.WeatherAppController"
+           id="main" stylesheets="@../css/weather.css" styleClass="body1">
+
+	<BorderPane id="border">
+		<center>
+			<GridPane fx:id="mainGrid">
+
+				<columnConstraints>
+					<ColumnConstraints percentWidth="100" />
+				</columnConstraints>
+
+				<rowConstraints>
+					<RowConstraints percentHeight="15" />
+					<RowConstraints percentHeight="30" />
+                    <RowConstraints percentHeight="15" />
+					<RowConstraints percentHeight="20" />
+                    <RowConstraints percentHeight="20" />
+				</rowConstraints>
+
+				<Label text="WARSAW, POLAND" fx:id="title" GridPane.rowIndex="0" />
+                <TemperatureValueControl fx:id="temperatureValueControl" GridPane.rowIndex="1"
+                                     source="$controller.temperatureValue" suffix="°C" />
+
+                <WeatherControl fx:id="cloudinessValueControl" GridPane.rowIndex="2"
+                                      source="$controller.cloudinessValue" />
+
+                <GridPane fx:id="firstGrid" GridPane.rowIndex="3">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="33" />
+                        <ColumnConstraints percentWidth="33" />
+                        <ColumnConstraints percentWidth="34" />
+                    </columnConstraints>
+
+                    <rowConstraints>
+                        <RowConstraints percentHeight="100" />
+                    </rowConstraints>
+
+                    <WeatherControl fx:id="barometerValueControl" GridPane.columnIndex="0"
+                                         source="$controller.barometerValue" suffix="hPa" />
+
+                    <WeatherControl fx:id="windForceValueControl" GridPane.columnIndex="1"
+                                         source="$controller.windForceValue" prefix="wind force:" suffix="m/s" />
+
+                    <WeatherControl fx:id="windDirectionValueControl" GridPane.columnIndex="2"
+                                         source="$controller.windDirectionValue" prefix="direction:"/>
+                </GridPane>
+
+                <GridPane fx:id="secondGrid" GridPane.rowIndex="4">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="33" />
+                        <ColumnConstraints percentWidth="33" />
+                        <ColumnConstraints percentWidth="34" />
+                    </columnConstraints>
+
+                    <rowConstraints>
+                        <RowConstraints percentHeight="100" />
+                    </rowConstraints>
+
+                    <WeatherControl fx:id="humidityValueControl" GridPane.columnIndex="0"
+                                         source="$controller.humidityValue" prefix="humidity:" suffix=" %" />
+
+                    <WeatherControl fx:id="pm25ValueControl" GridPane.columnIndex="1"
+                                         source="$controller.PM25Value" prefix="PM2.5:" suffix="μg/m^3" />
+
+                    <WeatherControl fx:id="pm10ValueControl" GridPane.columnIndex="2"
+                                         source="$controller.PM10Value" prefix="PM10:" suffix="μg/m^3" />
+                </GridPane>
+
+			</GridPane>
+		</center>
+
+        <bottom>
+            <HBox id="statusContainer">
+                <JFXButton fx:id="settingsButton">
+                    <graphic>
+                        <FontIcon iconLiteral="fa-wrench" />
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="refreshButton">
+                    <graphic>
+                        <FontIcon iconLiteral="fa-refresh" />
+                    </graphic>
+                </JFXButton>
+                <Region HBox.hgrow="ALWAYS" />
+                <FontIcon fx:id="errorIcon" iconLiteral="fa-exclamation-triangle" />
+                <SpinningFontIcon fx:id="workingIcon" iconLiteral="fa-cog" />
+            </HBox>
+        </bottom>
+
+	</BorderPane>
+
+</StackPane>

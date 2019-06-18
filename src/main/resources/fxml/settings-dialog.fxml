@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import weatherApp.control.IntervalValidator?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<JFXDialog xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.112-ea"
+		   fx:id="dialog" stylesheets="@../css/jfx.css">
+	<GridPane>
+		<columnConstraints>
+			<ColumnConstraints percentWidth="60" />
+			<ColumnConstraints percentWidth="40" />
+		</columnConstraints>
+
+		<rowConstraints>
+			<RowConstraints percentHeight="100" />
+		</rowConstraints>
+
+		<JFXDialogLayout fx:id="content" GridPane.columnIndex="0">
+			<heading>
+				<Label>Settings</Label>
+			</heading>
+			<body>
+				<HBox>
+					<Label>Auto-refresh interval (seconds):</Label>
+						<JFXTextField fx:id="intervalField" promptText="Interval">
+						<validators>
+							<IntervalValidator message="Integer required"></IntervalValidator>
+						</validators>
+					</JFXTextField>
+				</HBox>
+			</body>
+			<actions>
+				<JFXButton fx:id="acceptButton" styleClass="dialog-button">
+					ACCEPT
+				</JFXButton>
+				<JFXButton fx:id="cancelButton" styleClass="dialog-button">
+					CANCEL
+				</JFXButton>
+			</actions>
+		</JFXDialogLayout>
+
+		<JFXDialogLayout GridPane.columnIndex="1">
+			<heading>
+				<Label>Data source</Label>
+			</heading>
+			<VBox fx:id="buttonBox">
+				<JFXRadioButton fx:id="openWeatherButton" text="OpenWeatherMap" />
+				<JFXRadioButton fx:id="meteoButton" text="Meteo Warszawa" />
+			</VBox>
+		</JFXDialogLayout>
+	</GridPane>
+</JFXDialog>

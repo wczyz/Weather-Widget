@@ -1,0 +1,71 @@
+@import "/css/jfoenix-fonts.css";
+@import "/css/jfoenix-design.css";
+
+.jfx-decorator-button {
+	-fx-background-color: TRANSPARENT;
+	-fx-background-radius: 0;
+	-fx-background-insets: 0;
+}
+
+.close-button:hover {
+	-fx-background-color: #00766c;
+}
+
+.resize-border {
+	-fx-border-width: 0;
+}
+
+.jfx-decorator-buttons-container {
+	-fx-padding: 0 0 4 0;
+    -fx-background-color: #4f9a94;
+}
+
+
+.jfx-dialog-overlay-pane {
+    -fx-background-color: rgba(0.0, 0.0, 0.0, 0.1);
+}
+
+.dialog-trigger {
+    -fx-background-color: WHITE;
+    -jfx-button-type: RAISED;
+    -fx-font-size: 14.0px;
+}
+
+.jfx-dialog-layout {
+    -fx-padding: 8.0px 14.0px 8.0px 14.0px;
+    -fx-text-fill: rgba(0.0, 0.0, 0.0, 0.87);
+}
+
+.jfx-layout-heading {
+    -fx-font-size: 18.0px;
+    -fx-font-weight: BOLD;
+    -fx-alignment: center-left;
+    -fx-padding: 5.0 0.0 5.0 0.0;
+}
+
+.jfx-layout-body {
+	-fx-alignment: center-left;
+	-fx-padding: 8px 0px 8px 0px;
+}
+
+.jfx-layout-body > .label {
+    -fx-font-size: 14.0px;
+    -fx-pref-width: 200.0px;
+    -fx-wrap-text: true;
+}
+
+.jfx-layout-body HBox {
+	-fx-alignment: baseline-left;
+	-fx-spacing: 5px;
+}
+
+.jfx-layout-actions {
+    -fx-padding: 10.0px 0.0 0.0 0.0;
+    -fx-alignment: left;
+}
+
+.dialog-button {
+    -fx-text-fill: #03A9F4;
+    -fx-font-weight: BOLD;
+    -fx-padding: 0.7em 0.8em;
+}
