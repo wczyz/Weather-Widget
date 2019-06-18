@@ -22,17 +22,17 @@
 	-fx-padding: 3.0 5.0 3.0 5.0;
 	-fx-background-color: #4f9a94;
 }
-/**/
+
 #statusContainer {
 	-fx-alignment: CENTER_LEFT;
 	-fx-spacing: 10.0px;
 }
-/**/
+
 #statusContainer FontIcon, #statusContainer SpinningFontIcon {
 	-fx-icon-size: 16.0px;
 	-fx-icon-color: WHITE;
 }
-/**/
+
 #errorIcon {
 	-fx-icon-color: -fx-red-color;
 }
@@ -51,28 +51,6 @@
 	-fx-background-color: rgba(255.0, 255.0, 255.0, 0.8);
 
 }
-
-/*.rate-icon-container {*/
-/*	-fx-background-color: rgba(255.0, 255.0, 255.0, 0.95);*/
-/*	-fx-pref-width: 80.0px;*/
-/*	-fx-max-width: 80.0px;*/
-/*}*/
-/**/
-/*.rate-icon-container2 {*/
-/*	-fx-background-color: rgba(255.0, 255.0, 255.0, 0.95);*/
-/*}*/
-/**/
-/*.rate-icon {*/
-/*	-fx-icon-size: 32.0px;*/
-/*	-fx-icon-color: -fx-base-color;*/
-/*}*/
-
-/*#gold-icon {*/
-/*	-fx-max-width: 40.0px;*/
-/*	-fx-max-height: 32.0px;*/
-/*	-fx-background-color: -fx-base-color;*/
-/*}*/
-
 
 .value-container {
 	-fx-alignment: BASELINE_LEFT;
@@ -105,47 +83,3 @@
 .chevron-up, .chevron-down {
 	-fx-icon-size: 14.0;
 }
-
-/*.chevron-up {*/
-/*	-fx-icon-color: -green-700;*/
-/*}*/
-/**/
-/*.chevron-down {*/
-/*	-fx-icon-color: -fx-red-color;*/
-/*}*/
-/**/
-/*.tooltip Text {*/
-/*	-fx-fill: WHITE;*/
-/*	-fx-font-size: 14.0;*/
-/*}*/
-/**/
-/*.tooltip FontIcon {*/
-/*	-fx-icon-color: WHITE;*/
-/*	-fx-icon-size: 16.0;*/
-/*}*/
-/**/
-/*.tooltip HBox {*/
-/*	-fx-spacing: 5.0px;*/
-/*	-fx-alignment: BASELINE_LEFT;*/
-/*}*/
-/**/
-/*.tooltip VBox {*/
-/*	-fx-spacing: 5.0px;*/
-/*}*/
-/**/
-/*.chart-series-area-line {*/
-/*    -fx-stroke-width: 3.0px;*/
-/*}*/
-/**/
-/*.default-color0.chart-series-area-line {*/
-/*	-fx-stroke: #03A9F4;*/
-/*}*/
-/**/
-/*.default-color0.chart-series-area-fill {*/
-/*	-fx-fill: rgba(3.0, 169.0, 244.0, 0.15);*/
-/*}*/
-
-
-/*.default-color0.chart-area-symbol {*/
-/*	-fx-background-color: #03A9F4, WHITE;*/
-/*}*/
